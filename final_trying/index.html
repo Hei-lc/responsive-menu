@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Constellation</title>
+	<meta name="description" content="constellation">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link rel="stylesheet" href="style.css">
+	<link href="https://fonts.googleapis.com/css?family=Gabriela|Source+Sans+Pro:300,400,600,700,900&display=swap" rel="stylesheet">
+
+</head>
+<body>
+	     															
+	<div class="twinkling"></div>
+	     														
+	<header>
+		<div class="header-container">     							
+			<h1>Constellations</h1>
+		</div>
+		
+		
+		     													  
+		<div class="button-container" id="toggle">
+			<span class="top"></span>
+			<span class="middle"></span>
+			<span class="bottom"></span>
+		</div>
+		<div class="overlay" id="overlay">
+			<nav class="overlay-menu">
+				<ul>
+					<li><a href="#constellation">Home</a></li>
+					<li><a href="#what is constellations?">About</a></li>
+					<li><a href="#12 constellations">Constellations</a></li>
+					<li><a href="#How to Find Constellations in the Night Sky?">Stargazing</a></li>
+				</ul>
+			</nav>
+		</div>
+	</header>
+	
+	
+		     													 	
+	<section id="section1" class="background">
+		<div id="crystal-animation">    							
+			<figure>
+			<img src="crystal.svg" alt="" class="crystal">
+			</figure>
+		</div>	
+	</section>
+	
+	
+			     													
+	<section id="section2" class="background">
+	<article class="content">
+			<h2>What is Constellations?</h2>
+			<p>Constellations are patterns in the night sky often formed by the most prominent stars to the naked eye. They are typically grouped around asterisms, patterns formed by prominent, relatively bright stars that appear to be close to each other in the night sky.</p>
+			
+			<p>Constellations often carry names and take the shape of gods, hunters, princesses, objects and mythical beasts associated with Greek mythology – however, at times, it requires quite an imagination to draw out what some constellations are supposed to represent! </p>
+			<aside><img src="crystal-animation.svg" alt="" class="crystal-animation"></aside>
+		</article>
+	</section>
+	
+	
+			     													
+		<section id="section3" class="background">
+	
+				<h2 >12 Constellations</h2>
+			  	<p>Click the constellation cards and understand more.</p>
+		<div class="card">
+			<ul class="gallery">
+				<li><a href="aries.html"><img src="1.svg" alt="" class="svg"></a></li>
+				<li><a href="taurus.html"><img src="4.svg" alt="" class="svg"></a></li>
+				<li><a href="gemini.html"><img src="7.svg" alt="" class="svg"></a></li>
+				<li><a href="cancer.html"><img src="10.svg" alt="" class="svg"></a></li>
+			</ul>
+			<ul class="gallery">	
+				<li><a href="leo.html"><img src="2.svg" alt="" class="svg"></a></li>
+				<li><a href="virgo.html"><img src="5.svg" alt="" class="svg"></a></li>
+				<li><a href="libra.html"><img src="8.svg" alt="" class="svg"></a></li>
+				<li><a href="pisces.html"><img src="11.svg" alt="" class="svg"></a></li>
+			</ul>
+			<ul class="gallery">	
+				<li><a href="saguttarius.html"><img src="3.svg" alt="" class="svg"></a></li>
+				<li><a href="capricorn.html"><img src="6.svg" alt="" class="svg"></a></li>
+				<li><a href="aquarius.html"><img src="9.svg" alt="" class="svg"></a></li>
+				<li><a href="scorpio.html"><img src="12.svg" alt="" class="svg"></a></li>
+			</ul>
+			</div>
+		</section>
+			     													
+
+		<section id="section4" class="background">
+			<div class="s3-content">
+				<h2>How to Find Constellations in the Night Sky?</h2>
+			  	<p class="s3">Using a star map will be your best bet for assisting in finding where to look for constellations, depending on your location and time of year. It’s different depending on where you live and on the seasons. You can also need the additional app to help find the constellations, that lets you enter your location and gives you a customized star map. </p>
+
+				<p class="s3">All you need is a dark sky, so as far away from cities as possible, and for extra visual aide, a pair of binoculars or a telescope. With binoculars or a telescope, you’ll see fainter stars and other features like nebulae and star clusters. When you’re out observing, you’ll want to generally orient yourself towards the North Star.</p>
+			</div>
+		</section>
+		
+	<script src="jquery-3.4.1.js"></script>
+	<script src="fullpage.js"></script>
+	<script src="main.js"></script>
+	<script src="jquery.smoothState.min.js"></script>
+	
+	<script>
+	$(document).ready(function() {
+  let hamburgerClicked = false;
+  $("#toggle").on("click", function() {
+    if (hamburgerClicked == false) {
+      $(".top").css(
+        "transform",
+        "translateY(11px) translateX(0) rotate(45deg)"
+      );
+      $(".middle").css("display", "none");
+      $(".bottom").css(
+        "transform",
+        "translateY(-11px) translateX(0) rotate(-45deg)"
+      );
+
+      hamburgerClicked = true;
+    } else {
+      $(".top").css("transform", "translateY(0px) translateX(0) rotate(0deg)");
+      $(".middle").css("display", "");
+      $(".bottom").css(
+        "transform",
+        "translateY(0px) translateX(0) rotate(0deg)"
+      );
+      hamburgerClicked = false;
+    }
+    $("#overlay").toggleClass("active");
+  });
+});
+	</script>
+</body>
+</html>
+
+
+
+
+
+
